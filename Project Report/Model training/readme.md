@@ -2,7 +2,7 @@
 
 This folder contains the notebook and saved model for HematoVision.
 
-## `BloodCellClassifier.ipynb`
+## `BloodCelltraining.ipynb`
 - Preprocesses image data
 - Builds MobileNetV2 model
 - Performs training and validation
