@@ -1,16 +1,44 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Result</title>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            text-align: center;
+            padding-top: 40px;
+        }
+        img {
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .card {
+            background: white;
+            display: inline-block;
+            padding: 30px;
+            border-radius: 15px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: white;
+            background: #667eea;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Prediction Result</h2>
-
-    <p><strong>Predicted Cell Type:</strong> {{ prediction }}</p>
-
-    <img src="{{ image_path }}" width="300">
-
-    <br><br>
-    <a href="/">Try another image</a>
+    <div class="card">
+        <h2>Prediction Result</h2>
+        <img src="{{ image_path }}"><br><br>
+        <h3>{{ prediction }}</h3>
+        <p>Confidence: {{ confidence }}%</p>
+        <a href="/">Try another image</a>
+    </div>
 </body>
 </html>
